@@ -1452,7 +1452,7 @@ srs_error_t SrsFormat::hevc_demux_ibmf_format(SrsBuffer* stream) {
         }
         stream->skip(NALUnitLength);
         
-        i += vcodec->NAL_unit_length + 1 + NALUnitLength;
+       i += nal_len_size + 1 + NALUnitLength;
     }
     
     return err;
